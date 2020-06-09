@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ public class FragSearch extends Fragment
 {
     private View view;
     private TextView tv_search;
+    private SearchView search_view;
 
     @Nullable
     @Override
@@ -30,6 +32,7 @@ public class FragSearch extends Fragment
     private void initUIComponent()
     {
         tv_search = view.findViewById(R.id.tv_search);
+        search_view = view.findViewById(R.id.search_view);
 
         tv_search.setText("Search Fragment");
     }
