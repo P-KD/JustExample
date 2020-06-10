@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
     /**
      * Adapter, Fragment lifecycle 이해할 것
      * Glide, retrofit2
-     * Room, pattern code 관련 공부하고 사용해볼 것
+     * Room 관련 공부하고 사용해볼 것
      **/
 
     private TextView tv_main;
