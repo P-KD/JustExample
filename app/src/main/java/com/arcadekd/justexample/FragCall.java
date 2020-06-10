@@ -1,6 +1,9 @@
 package com.arcadekd.justexample;
 
 import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +14,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +35,9 @@ public class FragCall extends Fragment
     private Button btn_copy;
     private ImageView iv_qr;
 
+    private final String LABEL = "WALLET";
+    private final String HOMEPAGE = "http://naver.com";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -44,7 +51,11 @@ public class FragCall extends Fragment
             @Override
             public void onClick(View v)
             {
-                //TODO: 구현필요
+                ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText(LABEL, HOMEPAGE);
+                clipboard.setPrimaryClip(clip);
+
+                Toast.makeText(getContext(), "클립보드에 복사되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
 
