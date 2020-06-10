@@ -35,4 +35,7 @@ dependencies {
 
     //QR코드
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+    //패턴 잠금
+    implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
 }

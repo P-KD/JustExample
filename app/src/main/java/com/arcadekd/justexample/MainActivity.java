@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity
      * Room, Search Bar, QR code, Bottom NavigationView, address copy to clipBoard, pattern code 관련 공부하고 사용해볼 것
      **/
 
+    /**
+     * Adapter, Fragment lifecycle 이해할 것
+     * Glide, retrofit2
+     * Room, pattern code 관련 공부하고 사용해볼 것
+     **/
+
     private TextView tv_main;
     private ViewPager vp_main;
     private Button btn_move;
