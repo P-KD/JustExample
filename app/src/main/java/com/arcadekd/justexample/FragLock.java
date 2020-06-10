@@ -24,7 +24,6 @@ public class FragLock extends Fragment
     private Button btn_add;
     private RecyclerViewAdapter adapter;
     private LinearLayoutManager linearLayoutManager;
-    private DataModel data;
 
     private ArrayList<DataModel> dataList;
 
@@ -40,9 +39,11 @@ public class FragLock extends Fragment
         adapter = new RecyclerViewAdapter(dataList);
         rv_lock.setAdapter(adapter);
 
-        btn_add.setOnClickListener(new View.OnClickListener() {
+        btn_add.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 DataModel dataModel = new DataModel("Test", R.mipmap.ic_launcher_round);
                 dataList.add(dataModel);
                 adapter.notifyDataSetChanged();

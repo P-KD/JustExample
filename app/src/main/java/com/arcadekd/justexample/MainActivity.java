@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
 {
     /**
      * Adapter, Fragment lifecycle 이해할 것
-     * Image Slider(Horizontal), RecyclerView(Vertical), Glide, retrofit2, textObserver, ViewPager,
+     * RecyclerView(Vertical), Glide, retrofit2, textObserver, ViewPager,
      * Room, Search Bar, QR code, Bottom NavigationView, address copy to clipBoard, pattern code 관련 공부하고 사용해볼 것
      **/
 

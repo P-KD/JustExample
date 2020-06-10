@@ -21,14 +21,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.dataModels = dataModels;
     }
 
+    public class CustomViewHolder extends RecyclerView.ViewHolder
+    {
+        protected TextView tv_text;
+        protected ImageView iv_recycler;
+
+        public CustomViewHolder(View itemView)
+        {
+            super(itemView);
+            this.tv_text = itemView.findViewById(R.id.item_tv_title);
+            this.iv_recycler = itemView.findViewById(R.id.item_iv_recycler);
+        }
+    }
+
     @NonNull
     @Override
     public RecyclerViewAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_lock, parent, false);
-        CustomViewHolder holder = new CustomViewHolder(view);
 
+        CustomViewHolder holder = new CustomViewHolder(view);
 
         return holder;
     }
@@ -81,17 +93,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public class CustomViewHolder extends RecyclerView.ViewHolder
-    {
-        protected TextView tv_text;
-        protected ImageView iv_recycler;
 
-        public CustomViewHolder(View itemView)
-        {
-            super(itemView);
-            this.tv_text = itemView.findViewById(R.id.item_tv_title);
-            this.iv_recycler = itemView.findViewById(R.id.item_iv_recycler);
-        }
-    }
 }
 
